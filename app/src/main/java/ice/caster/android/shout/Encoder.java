@@ -23,7 +23,7 @@
  * THE SOFTWARE.
  */
 
-package android.shout;
+package ice.caster.android.shout;
 
 import android.media.AudioFormat;
 import android.media.AudioRecord;

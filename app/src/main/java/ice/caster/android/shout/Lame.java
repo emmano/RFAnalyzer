@@ -20,7 +20,7 @@
  * THE SOFTWARE.
  */
 
-package android.shout;
+package ice.caster.android.shout;
 
 /**
  * LAME interface class

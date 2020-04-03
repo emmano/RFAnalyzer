@@ -13,8 +13,8 @@
 //import butterknife.BindView;
 //import butterknife.ButterKnife;
 //import ice.caster.android.R;
-//import ice.caster.android.shout.Config;
-//import ice.caster.android.shout.Encoder;
+//import ice.caster.ice.caster.android.shout.Config;
+//import ice.caster.ice.caster.android.shout.Encoder;
 //
 //public class BroadcastFragment extends Fragment {
 //

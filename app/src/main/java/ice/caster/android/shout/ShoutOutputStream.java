@@ -1,4 +1,4 @@
-package android.shout;
+package ice.caster.android.shout;
 
 import java.io.IOException;
 
@@ -10,6 +10,7 @@ public class ShoutOutputStream {
     static {
         System.loadLibrary("shout");
         System.loadLibrary("shout-jni");
+        System.loadLibrary("lamemp3");
     }
 
     public ShoutOutputStream() {

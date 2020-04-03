@@ -1,4 +1,4 @@
-package android.shout;
+package ice.caster.android.shout;
 
 /**
  * Created by fatih on 01/11/15.

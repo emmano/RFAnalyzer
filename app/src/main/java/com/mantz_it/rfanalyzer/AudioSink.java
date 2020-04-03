@@ -3,8 +3,8 @@ package com.mantz_it.rfanalyzer;
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioTrack;
-import android.shout.Lame;
-import android.shout.ShoutOutputStream;
+import ice.caster.android.shout.Lame;
+import ice.caster.android.shout.ShoutOutputStream;
 import android.util.Log;
 
 import java.io.IOException;
@@ -153,10 +153,11 @@ public class AudioSink extends Thread {
 		audioTrack.play();
 		ShoutOutputStream shout = new ShoutOutputStream();
 		try {
-			shout.init("188.226.213.202", 8002, "/test", "test", "testing");
+			shout.init("icedl1.mediainbox.net", 9000, "/rftest.mp3", "source", "logger");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
 		Lame.init(sampleRate, 1, sampleRate, 32);
 
 		short[] buffer = new short[sampleRate * (16 / 8) * 1 * 1]; // SampleRate[Hz] * 16bit * Mono * 5sec
@@ -184,10 +185,10 @@ public class AudioSink extends Thread {
 				// Convert doubles to shorts [expect doubles to be in [-1...1]
 				floatPacket = filteredPacket.re();
 				for (int i = 0; i < filteredPacket.size(); i++) {
-					shortPacket[i] = (short) (floatPacket[i] * 32767);
+					shortPacket[i] = (short) (floatPacket[i] * sampleRate);
 				}
 
-				// Write it to the audioTrack:
+				 //Write it to the audioTrack:
 				int encResult = Lame.encode(shortPacket,
 						shortPacket, packetSize, mp3buffer);
 				if (encResult != 0) {
