@@ -3,8 +3,11 @@ package com.mantz_it.rfanalyzer;
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioTrack;
+import android.shout.Lame;
+import android.shout.ShoutOutputStream;
 import android.util.Log;
 
+import java.io.IOException;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.TimeUnit;
 
@@ -148,6 +151,16 @@ public class AudioSink extends Thread {
 
 		// start audio playback:
 		audioTrack.play();
+		ShoutOutputStream shout = new ShoutOutputStream();
+		try {
+			shout.init("188.226.213.202", 8002, "/test", "test", "testing");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		Lame.init(sampleRate, 1, sampleRate, 32);
+
+		short[] buffer = new short[sampleRate * (16 / 8) * 1 * 1]; // SampleRate[Hz] * 16bit * Mono * 5sec
+		byte[] mp3buffer = new byte[(int) (7200 + buffer.length * 2 * 1.25)];
 
 		// Continuously write the data from the queue to the audio track:
 		while (!stopRequested) {
@@ -175,6 +188,31 @@ public class AudioSink extends Thread {
 				}
 
 				// Write it to the audioTrack:
+				int encResult = Lame.encode(shortPacket,
+						shortPacket, packetSize, mp3buffer);
+				if (encResult != 0) {
+					try {
+						shout.write(mp3buffer, encResult);
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+				int flushResult = Lame.flush(mp3buffer);
+
+				if(flushResult != 0) {
+					try {
+						shout.write(mp3buffer, flushResult);
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+
+				try {
+					shout.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
 				if(audioTrack.write(shortPacket, 0, filteredPacket.size()) != filteredPacket.size()) {
 					Log.e(LOGTAG,"run: write() returned with error! stop");
 					stopRequested = true;
