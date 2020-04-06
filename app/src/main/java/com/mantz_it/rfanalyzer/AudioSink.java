@@ -196,13 +196,14 @@ public class AudioSink extends Thread {
 
         //Write it to the audioTrack:
 
-        if (audioTrack.write(shortPacket, 0, filteredPacket.size()) != filteredPacket.size()) {
+        final int writes = audioTrack.write(shortPacket, 0, filteredPacket.size());
+        if (writes != filteredPacket.size()) {
           Log.e(LOGTAG, "run: write() returned with error! stop");
           stopRequested = true;
         }
         Runnable task = new Runnable() {
           @Override public void run() {
-            int encResult = Lame.encode(shortPacket, shortPacket, 32, mp3buffer);
+            int encResult = Lame.encode(shortPacket, shortPacket, writes, mp3buffer);
             if (encResult != 0) {
               try {
                 shout.write(mp3buffer, encResult);
