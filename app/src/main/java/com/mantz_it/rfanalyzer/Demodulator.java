@@ -36,7 +36,7 @@ import java.util.concurrent.TimeUnit;
 public class Demodulator extends Thread {
 	private boolean stopRequested = true;
 	private static final String LOGTAG = "Demodulator";
-	private static final int AUDIO_RATE = 31250;	// Even though this is not a proper audio rate, the Android system can
+	private static final int AUDIO_RATE = 44100;	// Even though this is not a proper audio rate, the Android system can
 													// handle it properly and it is a integer fraction of the input rate (1MHz).
 	// The quadrature rate is the sample rate that is used for the demodulation:
 	private static final int[] QUADRATURE_RATE = {	1,				// off; this value is not 0 to avoid divide by zero errors!

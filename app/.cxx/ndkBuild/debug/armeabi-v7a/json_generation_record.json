@@ -1,0 +1,80 @@
+[
+  {
+    "level": "INFO",
+    "message": "Start JSON generation. Platform version: 21 min SDK version: armeabi-v7a",
+    "file": "/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
+  },
+  {
+    "level": "INFO",
+    "message": "rebuilding JSON /Users/emmano/Android/RFAnalyzer/app/.cxx/ndkBuild/debug/armeabi-v7a/android_gradle_build.json due to:",
+    "file": "/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
+  },
+  {
+    "level": "INFO",
+    "message": "- a dependent build file changed",
+    "file": "/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
+  },
+  {
+    "level": "INFO",
+    "message": "  - /Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Application.mk",
+    "file": "/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
+  },
+  {
+    "level": "INFO",
+    "message": "keeping json folder \u0027/Users/emmano/Android/RFAnalyzer/app/.cxx/ndkBuild/debug/armeabi-v7a\u0027 but regenerating project",
+    "file": "/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
+  },
+  {
+    "level": "INFO",
+    "message": "executing ndkBuild Executable : /Users/emmano/Android/sdk/ndk/21.0.6113669/ndk-build\narguments : \nNDK_PROJECT_PATH\u003dnull\nAPP_BUILD_SCRIPT\u003d/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Android.mk\nNDK_APPLICATION_MK\u003d/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Application.mk\nAPP_ABI\u003darmeabi-v7a\nNDK_ALL_ABIS\u003darmeabi-v7a\nNDK_DEBUG\u003d1\nAPP_PLATFORM\u003dandroid-21\nNDK_OUT\u003d/Users/emmano/Android/RFAnalyzer/app/build/intermediates/ndkBuild/debug/obj\nNDK_LIBS_OUT\u003d/Users/emmano/Android/RFAnalyzer/app/build/intermediates/ndkBuild/debug/lib\nAPP_SHORT_COMMANDS\u003dfalse\nLOCAL_SHORT_COMMANDS\u003dfalse\n-B\n-n\njvmArgs : \n\n",
+    "file": "/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
+  },
+  {
+    "level": "INFO",
+    "message": "Executable : /Users/emmano/Android/sdk/ndk/21.0.6113669/ndk-build\narguments : \nNDK_PROJECT_PATH\u003dnull\nAPP_BUILD_SCRIPT\u003d/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Android.mk\nNDK_APPLICATION_MK\u003d/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Application.mk\nAPP_ABI\u003darmeabi-v7a\nNDK_ALL_ABIS\u003darmeabi-v7a\nNDK_DEBUG\u003d1\nAPP_PLATFORM\u003dandroid-21\nNDK_OUT\u003d/Users/emmano/Android/RFAnalyzer/app/build/intermediates/ndkBuild/debug/obj\nNDK_LIBS_OUT\u003d/Users/emmano/Android/RFAnalyzer/app/build/intermediates/ndkBuild/debug/lib\nAPP_SHORT_COMMANDS\u003dfalse\nLOCAL_SHORT_COMMANDS\u003dfalse\n-B\n-n\njvmArgs : \n\n",
+    "file": "/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
+  },
+  {
+    "level": "INFO",
+    "message": "done executing ndkBuild",
+    "file": "/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
+  },
+  {
+    "level": "INFO",
+    "message": "write build output /Users/emmano/Android/RFAnalyzer/app/.cxx/ndkBuild/debug/armeabi-v7a/build_output.txt",
+    "file": "/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
+  },
+  {
+    "level": "INFO",
+    "message": "parse and convert ndk-build output to build configuration JSON",
+    "file": "/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
+  },
+  {
+    "level": "INFO",
+    "message": "found application make file /Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Application.mk",
+    "file": "/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
+  },
+  {
+    "level": "INFO",
+    "message": "write command file /Users/emmano/Android/RFAnalyzer/app/.cxx/ndkBuild/debug/armeabi-v7a/build_command.txt",
+    "file": "/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
+  },
+  {
+    "level": "INFO",
+    "message": "JSON generation completed without problems",
+    "file": "/Users/emmano/Android/RFAnalyzer/app/src/main/cpp/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
+  }
+]
